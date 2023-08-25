@@ -22,7 +22,8 @@ public class EmployeeController {
     public Employee addEmployee(@RequestParam String firstName, @RequestParam String lastName, @RequestParam int department, @RequestParam double salary) {
         return employeeService.addEmployee(firstName, lastName, department, salary);
     }
-//http://localhost:8080/employee/add?firstName=Ivan&lastName=Ivanov&department=1&salary=15000
+
+    //http://localhost:8080/employee/add?firstName=Ivan&lastName=Ivanov&department=1&salary=15000
     @GetMapping(path = "/remove")
     public Employee removeEmployee(@RequestParam String firstName, @RequestParam String lastName, @RequestParam int department, @RequestParam double salary) {
         return employeeService.removeEmployee(firstName, lastName, department, salary);
@@ -37,4 +38,5 @@ public class EmployeeController {
     public Collection<Employee> printAll() {
         return employeeService.printAll();
     }
+
 }

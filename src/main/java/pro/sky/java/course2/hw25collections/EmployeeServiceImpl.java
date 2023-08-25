@@ -11,8 +11,12 @@ public class EmployeeServiceImpl implements EmployeeService {
     private final List<Employee> employees = new ArrayList<>();
     private int size = 10;
 
-
-
+//    public EmployeeServiceImpl(){
+//        employees.add(new Employee("Иван1", "Иванов1", 1, 10_000));
+//        employees.add(new Employee("Иван2", "Иванов2", 1, 11_000));
+//        employees.add(new Employee("Иван3", "Иванов3", 2, 12_000));
+//        employees.add(new Employee("Иван4", "Иванов4", 2, 13_000));
+//    }
 
 
     public Employee addEmployee(String firstName, String lastName, int department, double salary) {

@@ -34,4 +34,10 @@ public class DepartmentController {
         return departmentService.getAllByDepartment(department);
     }
 
+    @GetMapping("/sum")
+    public double sum(@RequestParam Integer department) {
+        return departmentService.sum(department);
+    }
+
+
 }

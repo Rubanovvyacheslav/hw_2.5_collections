@@ -42,4 +42,12 @@ public class DepartmentService {
                 .filter(employee -> department == null || employee.getDepartment() == department)
                 .collect(groupingBy(Employee::getDepartment, toList()));
     }
+
+    public Double sum(Integer department) {
+        return employeeService.printAll().stream()
+                .filter(employee -> department == null || employee.getDepartment() == department)
+                .map(Employee::getSalary)
+                .mapToDouble(Double::doubleValue)
+                .sum();
+    }
 }
