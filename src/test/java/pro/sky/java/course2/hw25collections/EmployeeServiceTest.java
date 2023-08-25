@@ -1,14 +1,9 @@
 package pro.sky.java.course2.hw25collections;
-
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.springframework.util.Assert;
 import pro.sky.java.course2.hw25collections.exceptions.EmployeeAlreadyAddedException;
 import pro.sky.java.course2.hw25collections.exceptions.EmployeeNotFoundException;
-
 import java.util.ArrayList;
 import java.util.List;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 public class EmployeeServiceTest {
@@ -44,7 +39,7 @@ public class EmployeeServiceTest {
         employeeService.addEmployee("Петр", "Петров", 1, 8_000);
         List<Employee> actual = (List<Employee>) employeeService.printAll();
         List<Employee> expected = new ArrayList<>();
-        actual.add(employee1);
+        expected.add(employee1);
         assertEquals(expected, actual);
     }
 
